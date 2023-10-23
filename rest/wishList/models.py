@@ -1,5 +1,7 @@
 from django.db import models
-from django.contrib.auth.models import User,Product
+from ..User.models import User
+from ..Product.models import Product
+
 
 class WishList(models.Model):
     WishList_ID=models.CharField(max_length=20,primary_key= True)

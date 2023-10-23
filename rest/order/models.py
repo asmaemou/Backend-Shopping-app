@@ -1,6 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import shoppingCarts 
-from django.contrib.auth.models import users
+from ..shoppingCarts.models import shoppingCarts 
+from ..users.models import users
 
 
 class Order(models.Model):

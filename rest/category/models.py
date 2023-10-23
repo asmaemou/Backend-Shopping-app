@@ -1,6 +1,6 @@
 from django.db import models
 
-class Category(models.Models):
+class Category(models.Model):
     category_ID=models.CharField(max_length=20, primary_key=True)
     category_Name = models.CharField(max_length=50)
     category_Description=models.CharField(max_length=40)

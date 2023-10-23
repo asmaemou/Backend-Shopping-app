@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import Category  
+from ..category.models import Category  
 
 
 class Product(models.Model):

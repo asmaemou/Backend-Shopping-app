@@ -1,5 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import shoppingCart,product
+from ..shoppingCart.models import shoppingCart
+from ..product.models import product
 
 class CartItem(models.Model):
     cartItem_ID=models.CharField(max_length=20, primary_key=True)

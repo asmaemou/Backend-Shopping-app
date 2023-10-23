@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User  # Import the User model from Django's built-in auth system
+from ..users.models import User  # Import the User model from Django's built-in auth system
 
 class shoppingCarts(models.Model):
     cartID = models.CharField(max_length=20, primary_key=True)
