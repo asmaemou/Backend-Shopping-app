@@ -1,5 +1,5 @@
 from django.db import models
-from ..Users.models import User
+from ..User.models import User
 
 class shoppingCarts(models.Model):
 

@@ -1,12 +1,12 @@
 from django.db import models
-from ..ShoppingCarts.models import ShoppingCarts 
-from ..Users.models import Users
+from ..ShoppingCart.models import ShoppingCart
+from ..User.models import User
 
 
 class Order(models.Model):
 
-    cart = models.ForeignKey(ShoppingCarts,on_delete=models.CASCADE)
-    user = models.ForeignKey(Users,on_delete=models.CASCADE)
+    cart = models.ForeignKey(ShoppingCart,on_delete=models.CASCADE)
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
     order_status = models.charField(max_length=20)
     order_date = models.charField(max_length=20)
     shipping_address = models.charField(max_length=20)

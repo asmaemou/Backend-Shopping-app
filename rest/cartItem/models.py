@@ -1,6 +1,6 @@
 from django.db import models
-from ..ShoppingCarts.models import ShoppingCart
-from ..Products.models import Product
+from ..ShoppingCart.models import ShoppingCart
+from ..Product.models import Product
 
 class CartItem(models.Model):
     
