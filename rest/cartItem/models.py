@@ -1,12 +1,12 @@
 from django.db import models
-from ..shoppingCart.models import ShoppingCart
-from ..product.models import Product
+from ..ShoppingCarts.models import ShoppingCart
+from ..Products.models import Product
 
 class CartItem(models.Model):
     
     cart=models.ForeignKey(ShoppingCart,on_delete=models.CASCADE)
     quantity=models.charField(max_length=20)
-    procuct=models.ForeignKey(Product,on_delete=models.CASCADE)
+    product=models.ForeignKey(Product,on_delete=models.CASCADE)
     subtotal=models.CharField(max_length=20)
 
     def __str(self):
