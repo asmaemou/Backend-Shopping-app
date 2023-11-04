@@ -4,6 +4,4 @@ from .models import Product
 
 class ProductView(ModelViewSet):
     serializer_class = RestSerializer
-    # list the product of a specific user
-    def get_queryset(self):
-        return Product.objects.all()
+    queryset = Product.objects.all()
