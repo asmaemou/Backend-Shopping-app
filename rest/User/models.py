@@ -14,4 +14,4 @@ class User(models.Model):
 
 
     def __str__(self) :
-        return self.user_fname + self.user_lname
+        return self.user_fname + ' '+ self.user_lname

@@ -10,4 +10,4 @@ class CartItem(models.Model):
     subtotal=models.CharField(max_length=20)
 
     def __str(self):
-        return self.product + self.quantity
+        return self.product + ' '+ self.quantity

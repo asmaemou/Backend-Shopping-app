@@ -4,4 +4,4 @@ from .models import users
 class RestSerializer(serializers.ModelSerializer):
     class Meta:
         model= users
-        fields=['id','name','description']
+        fields='__all__'

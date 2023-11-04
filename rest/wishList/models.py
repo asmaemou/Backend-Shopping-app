@@ -9,4 +9,4 @@ class WishList(models.Model):
     product = models.ForeignKey(Product,on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.user + self.product
+        return self.user + ' '+ self.product
