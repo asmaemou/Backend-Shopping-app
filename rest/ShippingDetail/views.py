@@ -1,8 +1,7 @@
 from rest_framework.viewsets import ModelViewSet
 from .serializers import RestSerializer
-from .models import ShippingDetails
+from .models import ShippingDetail
 
-class ShippingDetailsView(ModelViewSet):
+class ShippingDetailView(ModelViewSet):
     serializer_class = RestSerializer
-    def get_queryset(self):
-        return ShippingDetails.objects.all()
+    queryset = ShippingDetail.objects.all()

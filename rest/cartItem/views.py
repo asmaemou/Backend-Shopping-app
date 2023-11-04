@@ -4,5 +4,4 @@ from .models import CartItem
 
 class CartItemView(ModelViewSet):
     serializer_class = RestSerializer
-    def get_queryset(self):
-        return CartItem.objects.all()
+    queryset = CartItem.objects.all()

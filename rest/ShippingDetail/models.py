@@ -1,7 +1,7 @@
 from django.db import models
 from ..Order.models import Order
 
-class ShippingDetails(models.Model):
+class ShippingDetail(models.Model):
 
     order = models.ForeignKey(Order,on_delete=models.CASCADE)
     shipping_method = models.CharField(max_length=20)

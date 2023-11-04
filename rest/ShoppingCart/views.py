@@ -4,5 +4,4 @@ from .models import ShoppingCart
 
 class ShoppingCartView(ModelViewSet):
     serializer_class = RestSerializer
-    def get_queryset(self):
-        return ShoppingCart.objects.all()
+    queryset=ShoppingCart.objects.all()
