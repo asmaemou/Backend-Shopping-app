@@ -9,4 +9,4 @@ class ShippingDetail(models.Model):
     estimated_delivery = models.CharField(max_length=20)
 
     def __str__(self):
-        self.shipping_method + ' '+ self.order
+        return self.shipping_method + ' '+ self.order

@@ -9,4 +9,4 @@ class ShoppingCart(models.Model):
     date_added = models.CharField(max_length=20)
 
     def __str__(self):
-        return self.cart + ' '+ self.total_price
+        return self.cart 
