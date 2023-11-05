@@ -7,7 +7,8 @@ from .Category.views import CategoryView
 from .Order.views import OrderView  
 from .PaymentMethod.views import PaymentMethodView 
 from .ShippingDetail.views import ShippingDetailView 
-from .ShoppingCart.views import ShoppingCartView 
+from .ShoppingCart.views import ShoppingCartView
+from .WishList.views import WishListView
 
 
 router = routers.DefaultRouter()
@@ -18,6 +19,8 @@ router.register(r'orders', OrderView, basename='orders')
 router.register(r'paymentsmethod', PaymentMethodView, basename='paymentsmethod')
 router.register(r'shippingdetails', ShippingDetailView, basename='shippingdetails')
 router.register(r'shoppingcarts', ShoppingCartView, basename='shoppingcarts')
+router.register(r'wishlists', WishListView, basename='wishlists')
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
