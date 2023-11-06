@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
+from pictures.conf import get_settings
 from rest_framework import routers
 from .Product.views import ProductView  
 from .CartItem.views import CartItemView  
@@ -26,3 +27,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 urlpatterns += router.urls
+
+if get_settings().USE_PLACEHOLDERS:
+    urlpatterns += [
+        path("_pictures/", include("pictures.urls")),
+    ]
