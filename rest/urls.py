@@ -1,6 +1,5 @@
 from django.contrib import admin
 from django.urls import path, include
-from pictures.conf import get_settings
 from rest_framework import routers
 from .Product.views import ProductView  
 from .CartItem.views import CartItemView  
@@ -10,6 +9,8 @@ from .PaymentMethod.views import PaymentMethodView
 from .ShippingDetail.views import ShippingDetailView 
 from .ShoppingCart.views import ShoppingCartView
 from .WishList.views import WishListView
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 router = routers.DefaultRouter()
@@ -25,10 +26,13 @@ router.register(r'wishlists', WishListView, basename='wishlists')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    path('pictures/', include('pictures.urls'))
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += router.urls
 
-if get_settings().USE_PLACEHOLDERS:
-    urlpatterns += [
-        path("_pictures/", include("pictures.urls")),
-    ]
+# if get_settings().USE_PLACEHOLDERS:
+#     urlpatterns += [
+#         path("_pictures/", include("pictures.urls")),
+#     ]
+# if settings.DEBUG:
+#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
