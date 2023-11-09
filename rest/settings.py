@@ -15,9 +15,6 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = '/Users/asmaemouradi/Desktop/software/REST/Backend-Shopping-app/rest/'
-
 
 
 
@@ -46,7 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest',
     'rest_framework',
-     'pictures',
 
 ]
 
@@ -127,10 +123,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
-MEDIA_URL='/media/'
+STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR,'static'),
@@ -152,20 +148,7 @@ REST_FRAMEWORK = {
     ],
 
 }
-PICTURES = {
-    "BREAKPOINTS": {
-        "xs": 576,
-        "s": 768,
-        "m": 992,
-        "l": 1200,
-        "xl": 1400,
-    },
-    "GRID_COLUMNS": 12,
-    "CONTAINER_WIDTH": 1200,
-    "FILE_TYPES": ["WEBP"],
-    "PIXEL_DENSITIES": [1, 2],
-    "USE_PLACEHOLDERS": True,
-    "QUEUE_NAME": "pictures",
-    "PROCESSOR": "pictures.tasks.process_picture",
-
-}
+# PICTURES = {
+#     'USE_PLACEHOLDERS': True,
+#     # ... other settings ...
+# }

@@ -8,12 +8,11 @@ class Product(models.Model):
     description = models.CharField(max_length=20)
     stock = models.CharField(max_length=20)
     rating = models.CharField(max_length=20)
-    # product_picture = models.CharField(max_length=20)
     name = models.CharField(max_length=20)
     price = models.CharField(max_length=20)
     status = models.CharField(max_length=20)
     manufacturer = models.CharField(max_length=20)
-    # picture = models.ProductField(upload_to="images/", null=True, blank=True)
+    picture = models.ImageField(upload_to='images/', null=True, blank=True)
       
 
     def __str__(self) :
