@@ -6,4 +6,4 @@ class Category(models.Model):
     description=models.CharField(max_length=40)
 
     def __str__(self):
-        return self.category_Name
+        return self.name
