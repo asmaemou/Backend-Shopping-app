@@ -10,6 +10,7 @@ from .ShippingDetail.views import ShippingDetailView
 from .ShoppingCart.views import ShoppingCartView
 from .WishList.views import WishListView
 from .User.views import UserView
+from .NewCollection.views import NewCollectionView
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -24,6 +25,7 @@ router.register(r'shippingdetails', ShippingDetailView, basename='shippingdetail
 router.register(r'shoppingcarts', ShoppingCartView, basename='shoppingcarts')
 router.register(r'wishlists', WishListView, basename='wishlists')
 router.register(r'users', UserView, basename='users')
+router.register(r'newcollections', NewCollectionView, basename='newcollections')
 
 
 urlpatterns = [

@@ -4,4 +4,5 @@ from .models import User
 
 class UserView(ModelViewSet):
     serializer_class = RestSerializer
-    queryset=User.objects.all()
+    def get_queryset(self):
+        return super().get_queryset()

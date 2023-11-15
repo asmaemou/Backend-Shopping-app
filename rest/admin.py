@@ -7,6 +7,7 @@ from .models import ShippingDetail
 from .models import ShoppingCart
 from .models import User
 from .models import WishList
+from .models import NewCollection
 
 
 admin.site.register(Category)
@@ -17,3 +18,4 @@ admin.site.register(ShippingDetail)
 admin.site.register(ShoppingCart)
 admin.site.register(User)
 admin.site.register(WishList)
+admin.site.register(NewCollection)

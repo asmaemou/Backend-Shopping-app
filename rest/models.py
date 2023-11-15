@@ -4,3 +4,5 @@ from .Product.models import *
 from .ShoppingCart.models import *
 from .ShippingDetail.models import *
 from .WishList.models import *
+from .NewCollection.models import *
+

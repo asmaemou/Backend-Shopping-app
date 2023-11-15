@@ -4,4 +4,6 @@ from .Product.views import *
 from .ShoppingCart.views import *
 from .ShippingDetail.views import *
 from .WishList.views import *
+from .NewCollection.views import *
+
 
