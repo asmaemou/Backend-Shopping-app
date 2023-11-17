@@ -9,7 +9,7 @@ class Product(models.Model):
     stock = models.CharField(max_length=20)
     rating = models.CharField(max_length=20)
     name = models.CharField(max_length=20)
-    amount = models.DecimalField(max_digits=19, decimal_places=10,default=0.00)
+    amount = models.DecimalField(max_digits=19, decimal_places=2,default=0.00)
     status = models.CharField(max_length=20)
     manufacturer = models.CharField(max_length=20)
     picture = models.ImageField(upload_to='images/', null=True, blank=True)
