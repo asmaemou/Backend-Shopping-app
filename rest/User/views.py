@@ -3,6 +3,5 @@ from .serializers import RestSerializer
 from .models import User
 
 class UserView(ModelViewSet):
+    queryset = User.objects.all()
     serializer_class = RestSerializer
-    def get_queryset(self):
-        return super().get_queryset()
