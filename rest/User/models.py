@@ -1,4 +1,5 @@
 from django.db import models
+from django.forms import JSONField
 
 class User(models.Model):
 
@@ -11,7 +12,8 @@ class User(models.Model):
     status = models.CharField(max_length=20)
     role = models.CharField(max_length=20)
     picture = models.ImageField(upload_to='images/', null=True, blank=True)
-    
+
+
 
     def __str__(self) :
         return self.fname + ' '+ self.lname
